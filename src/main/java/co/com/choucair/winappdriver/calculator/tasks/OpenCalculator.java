@@ -4,7 +4,6 @@ import net.serenitybdd.screenplay.Actor;
 import net.serenitybdd.screenplay.Task;
 import net.serenitybdd.screenplay.Tasks;
 
-import static co.com.choucair.winappdriver.calculator.userinterfaces.CaculatorPage.BUTTON_CLEAR;
 import static co.com.choucair.winappdriver.calculator.userinterfaces.CalculatorLeftBar.*;
 import static co.com.choucair.winappdriver.calculator.userinterfaces.CurrencyConverter.BUTTON_REFRESH_RATES;
 
@@ -23,16 +22,16 @@ public class OpenCalculator implements Task {
 
     @Override
     public <T extends Actor> void performAs(T actor) {
-//        switch (funtion) {
-//            case "standart":
-//                BUTTON_TOGGLE_LEFT_PANE.click();
-//                BUTTON_STANDART_CALCULATOR.click();
-//                BUTTON_CLEAR.click();
-//            case "currency":
-//                BUTTON_TOGGLE_LEFT_PANE.click();
-//                BUTTON_CURRENCY_CALCULATOR.click();
-//                BUTTON_REFRESH_RATES.click();
-//                BUTTON_CLEAR.click();
-//        }
+        switch (funtion) {
+            case "standart":
+                BUTTON_TOGGLE_LEFT_PANE.click();
+                BUTTON_STANDART_CALCULATOR.click();
+                BUTTON_CLEAR.click();
+            case "currency":
+                BUTTON_TOGGLE_LEFT_PANE.click();
+                BUTTON_CURRENCY_CALCULATOR.click();
+                BUTTON_REFRESH_RATES.click();
+                BUTTON_CLEAR.click();
+        }
     }
 }

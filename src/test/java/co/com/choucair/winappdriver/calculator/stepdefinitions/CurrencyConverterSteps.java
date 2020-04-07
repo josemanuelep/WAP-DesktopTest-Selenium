@@ -1,18 +1,17 @@
 package co.com.choucair.winappdriver.calculator.stepdefinitions;
 
+import co.com.choucair.winappdriver.calculator.tasks.OpenCalculator;
 import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
-
-import static co.com.choucair.winappdriver.calculator.userinterfaces.CalculatorLeftBar.BUTTON_TOGGLE_LEFT_PANE;
+import net.serenitybdd.screenplay.actors.OnStage;
 
 public class CurrencyConverterSteps {
     private String actor = "Jose";
 
     @Given("^Jose goes to currency calculator$")
     public void joseGoesToCurrencyCalculator() {
-//        OnStage.theActorCalled(actor).wasAbleTo(OpenCalculator.currencyConverter());
-        BUTTON_TOGGLE_LEFT_PANE.click();
+        OnStage.theActorCalled(actor).wasAbleTo(OpenCalculator.currencyConverter());
     }
 
     @Given("^He set currency \"([^\"]*)\" and \"([^\"]*)\"$")
